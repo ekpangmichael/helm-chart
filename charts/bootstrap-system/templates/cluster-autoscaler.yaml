@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://kubernetes.github.io/autoscaler
     chart: cluster-autoscaler
-    targetRevision: "{{ index .Values "targetRevision" "kube-state-metrics" }}"
+    targetRevision: "{{ index .Values "targetRevision" "cluster-autoscaler" }}"
     helm:
       values: |-
         autoDiscovery:
