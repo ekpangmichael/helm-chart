@@ -9,8 +9,6 @@ values: |-
   deployment:
     enabled: true
     containerPort: 80
-  autoscaling:
-    enabled: true
   service:
     enabled: true
   podDisruptionBudget:
