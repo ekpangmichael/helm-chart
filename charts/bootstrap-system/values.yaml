@@ -1,0 +1,6 @@
+targetRevision:
+  cluster-autoscaler: 9.29.1
+  ingress-nginx: 4.7.0
+  kube-state-metrics: 5.8.0
+  metrics-server: 3.10.0
+ 

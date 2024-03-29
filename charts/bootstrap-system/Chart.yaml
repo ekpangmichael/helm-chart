@@ -1,0 +1,7 @@
+apiVersion: v2
+name: bootstrap-system
+description: On bootstrap chart with all the system components govern by ArgoCD
+
+type: application
+
+version: 1.0.0

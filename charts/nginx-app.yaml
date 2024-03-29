@@ -1,0 +1,24 @@
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: nginx
+#   namespace: argocd
+# spec:
+#   project: default
+#   source:
+#     chart: nginx-chart
+#     repoURL: https://ekpangmichael.github.io/helm-chart/charts
+#     targetRevision: 0.1.0
+#     helm:
+#       values:  |-
+#         replicaCount: 1
+#         image:
+#           repository: nginx
+#           pullPolicy: IfNotPresent
+#         service:
+#           type: ClusterIP
+#           port: 80
+#         fullnameOverride: ""
+#   destination:
+#     server: "https://kubernetes.default.svc"
+#     namespace: test
