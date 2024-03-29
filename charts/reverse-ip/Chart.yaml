@@ -1,0 +1,4 @@
+apiVersion: v2
+name: reverse-ip
+version: 0.1.0
+description: this is central chart that can be used by all applications
