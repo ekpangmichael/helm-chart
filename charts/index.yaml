@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  nginx-chart:
+  - apiVersion: v2
+    appVersion: 1.21.6
+    created: "2024-03-29T01:09:47.531637+01:00"
+    description: A Helm chart for deploying Nginx
+    digest: 998eb38087518424167328eb00761fe6fe4c83614baa2672055d4f7bcf5fdb51
+    name: nginx-chart
+    urls:
+    - https://ekpangmichael.github.io/helm-chart/nginx-chart-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-03-29T01:09:47.530979+01:00"
