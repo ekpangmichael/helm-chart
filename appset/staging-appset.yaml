@@ -17,7 +17,7 @@ spec:
     spec:
       project: '{{project}}'
       source:
-        chart: staging-onrunning
+        chart: reverse-ip
         repoURL: https://ekpangmichael.github.io/helm-chart/charts
         targetRevision: 0.1.0
         helm:
