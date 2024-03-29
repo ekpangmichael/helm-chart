@@ -2,12 +2,12 @@ apiVersion: v1
 entries:
   bootstrap-system:
   - apiVersion: v2
-    created: "2024-03-29T16:54:12.047851+01:00"
+    created: "2024-03-29T17:22:10.469829+01:00"
     description: On bootstrap chart with all the system components govern by ArgoCD
-    digest: b76f30f31cf2f10545917ec8117a8e0741317dc029ac7593260c92aaf99cd8ca
+    digest: 57653fca4e241b71eab173cdc0d111a8943206de4956acc31e79416a988e62db
     name: bootstrap-system
     type: application
     urls:
     - https://ekpangmichael.github.io/helm-chart/charts/bootstrap-system-1.0.0.tgz
     version: 1.0.0
-generated: "2024-03-29T16:54:12.046985+01:00"
+generated: "2024-03-29T17:22:10.469287+01:00"
