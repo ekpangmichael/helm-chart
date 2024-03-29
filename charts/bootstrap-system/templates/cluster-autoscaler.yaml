@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://kubernetes.github.io/autoscaler
     chart: cluster-autoscaler
-    targetRevision: {{ index .Values "targetRevision" "cluster-autoscaler" }}
+    targetRevision: "{{ index .Values "targetRevision" "kube-state-metrics" }}"
     helm:
       values: |-
         autoDiscovery:
@@ -18,7 +18,8 @@ spec:
         rbac:
           create: true
           serviceAccount:
-            annotations: eks.amazonaws.com/role-arn: "arn:aws:iam::486469140679:role/staging-cluster-ClusterAutoscaler-Role"
+            annotations:
+              eks.amazonaws.com/role-arn: "arn:aws:iam::486469140679:role/staging-cluster-ClusterAutoscaler-Role"
         awsRegion: "eu-west-1"
   destination:
     server: https://kubernetes.default.svc
