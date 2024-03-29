@@ -1,24 +1,24 @@
-# name: reverse-ip-staging
-# project: reverse-ip
-# namespace: staging
-# values: |-
-#   fullnameOverride: reverse-ip-staging
-#   image:
-#     repository: nginx:latest
-#   namespace: staging
-#   deployment:
-#     enabled: true
-#     containerPort: 80
-#   autoscaling:
-#     enabled: true
-#   service:
-#     enabled: true
-#   podDisruptionBudget:
-#     enabled: true
-#   ingress:
-#     enabled: true
-#     host: reverse-ip.michael.ekpang.com
-#     paths:
-#     - path: /
-#       serviceName: reverse-ip-staging
+name: reverse-ip-staging
+project: reverse-ip
+namespace: staging
+values: |-
+  fullnameOverride: reverse-ip-staging
+  image:
+    repository: nginx:latest
+  namespace: staging
+  deployment:
+    enabled: true
+    containerPort: 80
+  autoscaling:
+    enabled: true
+  service:
+    enabled: true
+  podDisruptionBudget:
+    enabled: true
+  ingress:
+    enabled: true
+    host: reverse-ip.michael.ekpang.com
+    paths:
+    - path: /
+      serviceName: reverse-ip-staging
  
