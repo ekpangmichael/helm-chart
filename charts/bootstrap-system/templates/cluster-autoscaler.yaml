@@ -12,18 +12,14 @@ spec:
     targetRevision: {{ index .Values "targetRevision" "cluster-autoscaler" }}
     helm:
       values: |-
-        serviceAccount:
-          create: true
-          name: cluster-autoscaler
-          annotations:
-            eks.amazonaws.com/role-arn: "arn:aws:iam::486469140679:role/staging-cluster-ClusterAutoscaler-Role"
         autoDiscovery:
           clusterName: "staging-cluster"
-          enabled: true
-        awsRegion: "eu-west-1"
-        cloudProvider: aws
+          cloudProvider: aws
         rbac:
           create: true
+          serviceAccount:
+            annotations: eks.amazonaws.com/role-arn: "arn:aws:iam::486469140679:role/staging-cluster-ClusterAutoscaler-Role"
+        awsRegion: "eu-west-1"
   destination:
     server: https://kubernetes.default.svc
     namespace: kube-system
