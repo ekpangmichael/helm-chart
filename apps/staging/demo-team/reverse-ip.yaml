@@ -8,7 +8,7 @@ values: |-
   namespace: staging
   deployment:
     enabled: true
-    containerPort: 80
+    containerPort: 4000
   service:
     enabled: true
   podDisruptionBudget:
