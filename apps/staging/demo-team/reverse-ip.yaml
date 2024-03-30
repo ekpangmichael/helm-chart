@@ -19,4 +19,9 @@ values: |-
     paths:
     - path: /
       serviceName: reverse-ip-staging
+  secret:
+    enabled: true
+  envFrom:
+  - secretRef:
+      name: db-credentials
  
