@@ -16,7 +16,6 @@ values: |-
   ingress:
     enabled: true
     host: reverse-ip.michael-ekpang.com
-    annotations: { nginx.ingress.kubernetes.io/force-ssl-redirect: "true", }
     paths:
     - path: /
       serviceName: reverse-ip-staging
