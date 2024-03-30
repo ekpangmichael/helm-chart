@@ -15,7 +15,7 @@ values: |-
     enabled: true
   ingress:
     enabled: true
-    host: reverse-ip.michael.ekpang.com
+    host: reverse-ip.michael-ekpang.com
     paths:
     - path: /
       serviceName: reverse-ip-staging
