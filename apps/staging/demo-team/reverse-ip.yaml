@@ -4,7 +4,7 @@ namespace: staging
 values: |-
   fullnameOverride: reverse-ip-staging
   image:
-    repository: 486469140679.dkr.ecr.eu-west-1.amazonaws.com/reverse_ip:staging-52a25ba91ef6ad2759f8c449e3d8f71fcd650989
+    repository: 486469140679.dkr.ecr.eu-west-1.amazonaws.com/reverse_ip:staging-c9aba87cf9ec04a76100fbf2a25b50e73b1b3b7e
   namespace: staging
   deployment:
     enabled: true
