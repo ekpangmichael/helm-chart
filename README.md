@@ -29,3 +29,30 @@ Deployed using the App of Apps approach in ArgoCD, it sets up your cluster with 
 
 Within the `apps` folder, developers will defind value files for applications to be deployed using `app-central-chart`. To deploy a new service, a developer needs to create a YAML file within this directory.
 
+## Helm-chart Configuration
+Use these values to configure your helmchart accordingly 
+
+Parameter | Required | Description | Default
+--------- | ----------- | ------- | -------
+`fullnameOverride` | yes| Name of your deployment  | 
+`image.repository` | yes | Docker image repository url<br><br>:information_source: If using with `image.registry` then just the repository name  |
+`image.registry` | no | ECR url<br><br>:warning: Required when using `image.tag` |
+`image.tag` | no | Docker image tag<br><br>:warning: Required when using `image.registry` |
+`namespace` | yes | The namespace where your application will be deployed (This will be created if it doesn't exist) |
+`containerPort` | yes | The port your application is running on |
+`autoscaling.enabled` | yes | if set to `true` HPA is deployed for your application|
+`autoscaling.minReplicas` | no | set min replicas for HPA |1
+`autoscaling.maxReplicas` | no | set max replicas for HPA |6
+`ingress.host` | yes | url of your application |
+`ingress.annotations` | no | ingress annotations |
+`replicaCount` | no | Number of replicas for your deployment | 2
+`env.enabled` | yes | if set to `true` this will create a kubernetes secret |
+`envFrom.secretRef.name` | yes | provide the name of your secret |
+`resources.requests` | yes | set requests resources for your deployment | ```cpu:0.5 memory:500Mi```
+`resources.limits` | yes | set limits resources for your deployment | ```cpu:1 memory:1Gi```
+`lProbe.enabled` | yes | if set to `true` this will enable liveness probe |
+`rProbe.enabled` | yes | if set to `true` this will enable Readiness probe |
+`serviceAccount.enabled` | yes | if set to `true` this will create a serviceAccount for yor deployemt |
+`serviceAccount.annotations` | no |  annotations for the serviceAccount |
+`metadata.annotations` | no | if set, the value must be a flat JSON key/value |
+
