@@ -1,4 +1,0 @@
-apiVersion: v2
-name: central-chart
-version: 0.1.0
-description: this is central chart that can be used by all applications
