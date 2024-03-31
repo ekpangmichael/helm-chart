@@ -27,5 +27,5 @@ Deployed using the App of Apps approach in ArgoCD, it sets up your cluster with 
 
 ## Application Values
 
-Within the `apps` folder, developers will find value files for applications to be deployed using `app-central-chart`. To deploy a new service, a developer needs to create a YAML file within this directory.
+Within the `apps` folder, developers will defind value files for applications to be deployed using `app-central-chart`. To deploy a new service, a developer needs to create a YAML file within this directory.
 
